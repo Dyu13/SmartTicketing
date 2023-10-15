@@ -1,0 +1,25 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs
+/bin/Debug
+/obj
+/SmartTicketing.Ai/bin/Debug/net7.0
+/SmartTicketing.Ai/obj
+/SmartTicketing.Api/bin/Debug/net7.0
+/SmartTicketing.Api/obj
+/SmartTicketing.Api.Models/bin/Debug/net7.0
+/SmartTicketing.Api.Models/obj
+/SmartTicketing.Application/bin/Debug/net7.0
+/SmartTicketing.Application/obj
+/SmartTicketing.Application.UnitTests/bin/Debug/net7.0
+/SmartTicketing.Application.UnitTests/obj
+/SmartTicketing.Common/bin/Debug/net7.0
+/SmartTicketing.Common/obj
+/SmartTicketing.Domain/bin/Debug/net7.0
+/SmartTicketing.Domain/obj
+/SmartTicketing.Infrastructure/bin/Debug/net7.0
+/SmartTicketing.Infrastructure/obj
+/SmartTicketing.IntegrationTests/bin/Debug/net7.0
+/SmartTicketing.IntegrationTests/obj
