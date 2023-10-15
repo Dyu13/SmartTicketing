@@ -15,7 +15,11 @@ public class Publisher : IPublisher
     {
         _connectionProvider = connectionProvider;
         _exchange = exchange;
-        _model = _connectionProvider.GetConnection().CreateModel();
+
+        var connection = _connectionProvider.GetConnection();
+        if (connection == null) return; // TODO: log + alerts
+
+        _model = connection.CreateModel();
         var ttl = new Dictionary<string, object>
             {
                 {"x-message-ttl", timeToLive }
