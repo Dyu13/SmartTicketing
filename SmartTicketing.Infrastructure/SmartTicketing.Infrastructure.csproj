@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper.AspNetCore.OData.EFCore" Version="4.0.1" />
+    <PackageReference Include="Microsoft.AspNetCore.SignalR.Core" Version="1.1.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="7.0.12" />
+    <PackageReference Include="RabbitMQ.Client" Version="6.6.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SmartTicketing.Application\SmartTicketing.Application.csproj" />
+    <ProjectReference Include="..\SmartTicketing.Common\SmartTicketing.Common.csproj" />
+    <ProjectReference Include="..\SmartTicketing.Domain\SmartTicketing.Domain.csproj" />
+  </ItemGroup>
+
+</Project>

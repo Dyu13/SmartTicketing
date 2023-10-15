@@ -1,0 +1,14 @@
+<!-- TODO: Use Reactive forms and validation -->
+<!-- Use PrimeNG for styling -->
+<!-- Implement Register function -->
+<form #loginForm="ngForm" (ngSubmit)="onSubmit(loginForm)" novalidate>
+  <input id="userId" name="User" placeholder="Username" ngModel />
+  <input
+    id="passwordId"
+    name="Password"
+    placeholder="Password"
+    type="password"
+    ngModel
+  />
+  <button>Submit</button>
+</form>

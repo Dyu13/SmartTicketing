@@ -1,0 +1,27 @@
+.navbar {
+  background-color: white;
+  height: 50px;
+}
+
+#nav-title {
+  margin-left: 55px;
+  color: green;
+  font-size: x-large;
+}
+
+#nav-buttons {
+  float: right;
+  margin-top: -40px;
+  margin-right: 50px;
+}
+#nav-buttons button {
+  background-color: wheat;
+}
+#nav-buttons button:hover {
+  background-color: green;
+  color: white;
+}
+
+.logBtn {
+  margin-left: 5px;
+}

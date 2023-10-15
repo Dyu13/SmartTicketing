@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "SmartTicketing.Ai": {
+      "commandName": "Project"
+    },
+    "Docker": {
+      "commandName": "Docker"
+    }
+  }
+}

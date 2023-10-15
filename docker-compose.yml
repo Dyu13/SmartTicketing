@@ -1,0 +1,42 @@
+version: '3.4'
+
+services:
+  smart-ticketing-ai:
+    image: ${DOCKER_REGISTRY-}smart-ticketing-ai
+    build:
+      context: .
+      dockerfile: SmartTicketing.Ai/Dockerfile
+    depends_on:
+      - rabbitmq
+    networks:
+      - ticketing-network
+
+  smart-ticketing-api:
+    image: ${DOCKER_REGISTRY-}smart-ticketing-api
+    container_name: smart-ticketing-api
+    build:
+      context: .
+      dockerfile: SmartTicketing.Api/Dockerfile
+    ports:
+      - 13600:13600
+    environment:
+      ASPNETCORE_URLS: http://+:13600; #not using https because it will be behind a reverse-proxy with https anyway and we do not need 0-trust policy here
+    depends_on:
+      - rabbitmq
+    networks:
+      - ticketing-network
+
+  rabbitmq:
+    image: rabbitmq:3-management
+    container_name: 'rabbitmq'
+    ports:
+      - 5672:5672
+      - 15672:15672
+    volumes:
+      - ~/.docker-conf/rabbitmq/data/:/var/lib/rabbitmq/
+      - ~/.docker-conf/rabbitmq/log/:/var/log/rabbitmq
+    networks:
+      - ticketing-network
+
+networks:
+  ticketing-network:

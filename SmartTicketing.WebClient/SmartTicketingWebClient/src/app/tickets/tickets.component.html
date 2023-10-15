@@ -1,0 +1,28 @@
+<div class="pagination">
+  <div (click)="lowerPage()">&laquo;</div>
+  <div
+    *ngFor="let page of PageList"
+    [ngClass]="{ active: page == SelectedPage }"
+    (click)="pageClick(page)"
+  >
+    {{ page }}
+  </div>
+  <div (click)="higherPage()">&raquo;</div>
+</div>
+
+<div class="surface-ground px-4 py-5 md:px-6 lg:px-8">
+  <div class="grid">
+    <div
+      class="col-12 md:col-6 lg:col-3"
+      *ngFor="let ticket of TicketList"
+      (click)="getSummary(ticket)"
+    >
+      <div class="surface-card shadow-2 p-3 border-round">
+        <div class="text-3xl font-medium text-900 mb-3">{{ ticket.Title }}</div>
+        <div class="font-medium text-500 mb-3">Status: {{ ticket.Status }}</div>
+        <!-- Define pipes to convert the status to a meaningful one and display the User who created and who is assigned for the task - or leave OData Enum map if good enough -->
+        <!-- Open in a detail page to show the full description -->
+      </div>
+    </div>
+  </div>
+</div>

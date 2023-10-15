@@ -1,4 +1,4 @@
-﻿# See http://help.github.com/ignore-files/ for more about ignoring files.
+# See http://help.github.com/ignore-files/ for more about ignoring files.
 
 SmartTicketing.WebClient/SmartTicketingWebClient/node_modules/
 
@@ -86,4 +86,3 @@ logFailures.txt
 
 # Visual Studio 2015
 .vs/
-
